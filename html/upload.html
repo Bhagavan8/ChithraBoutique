@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .upload-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .btn-upload {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="upload-container">
+        <h2 class="text-center mb-4">File Upload</h2>
+        <form id="fileUploadForm" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="fileInput" class="form-label">Select Image</label>
+                <input type="file" class="form-control" id="fileInput" name="file" accept="image/*" required />
+            </div>
+            <div class="mb-3">
+                <label for="categoryID" class="form-label">Category ID</label>
+                <input type="text" class="form-control" id="categoryID" name="categoryID" placeholder="Enter Category ID" required />
+            </div>
+            <div class="mb-3">
+                <label for="categoryname" class="form-label">Category Name</label>
+                <input type="text" class="form-control" id="categoryname" name="categoryname" placeholder="Enter Category Name" required />
+            </div>
+            <button type="submit" class="btn btn-primary btn-upload">Upload</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById("fileUploadForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        
+        try {
+            const response = await fetch("http://localhost:8080/homepage/upload", {
+                method: "POST",
+                body: formData
+            });
+
+            if (!response.ok) {
+                throw new Error(`Upload failed: ${response.statusText}`);
+            }
+
+            alert("File uploaded successfully!");
+        } catch (error) {
+            console.error("Error uploading file:", error);
+            alert("Error uploading file.");
+        }
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

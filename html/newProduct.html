@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+        form {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>File Upload</h2>
+    <form id="fileUploadForm" enctype="multipart/form-data">
+        <label for="fileInput">Upload Image:</label>
+        <input type="file" id="fileInput" name="file" accept="image/*" required /><br>
+
+        <label for="categoryID">Category ID:</label>
+        <input type="text" id="categoryID" name="categoryID" required /><br>
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" required /><br>
+
+        <label for="productname">Product Name:</label>
+        <input type="text" id="productname" name="productname" required /><br>
+
+        <label for="productID">Product ID:</label>
+        <input type="text" id="productID" name="productID" required /><br>
+
+        <label for="productID">Category Name:</label>
+        <input type="text" id="categoryname" name="categoryname" required /><br>
+
+        <button type="submit">Upload</button>
+    </form>
+
+    <script>
+        document.getElementById('fileUploadForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const fileInput = document.getElementById('fileInput');
+            const categoryID = document.getElementById('categoryID');
+            const price = document.getElementById('price');
+            const productname = document.getElementById('productname');
+            const productID = document.getElementById('productID'); 
+            const categoryName = document.getElementById('categoryname');
+            if (!fileInput.files.length) {
+                alert("Please select an image file.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+            formData.append('categoryID', categoryID.value);
+            formData.append('productname', productname.value);
+            formData.append('price', price.value);
+            formData.append('productID', productID.value);
+            formData.append('categoryname', categoryname.value);
+
+            try {
+                const response = await fetch('http://localhost:8080/homepage/newproductupload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`Error: ${errorText}`);
+                }
+
+                const contentType = response.headers.get('Content-Type');
+                if (contentType && contentType.includes('application/json')) {
+                    const data = await response.json();
+                    alert(`File uploaded successfully: ${data.message || 'Success'}`);
+                } else {
+                    const text = await response.text();
+                    alert(`File uploaded successfully, but response is not in JSON format: ${text}`);
+                }
+            } catch (error) {
+                console.error('Upload failed:', error);
+                alert(`Upload failed: ${error.message}`);
+            }
+        });
+    </script>
+</body>
+</html>

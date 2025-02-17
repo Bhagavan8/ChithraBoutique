@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chithra Boutique</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                    <!-- <div class="tip">2</div> -->
+                </a></li>
+            <li><a href="#"><span class="icon_bag_alt"></span>
+                    <!-- <div class="tip">2</div> -->
+                </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="#">Women’s</a>
+                                <ul class="dropdown">
+                                    <li><a href="./product-details.html">Saree</a></li>
+                                    <li><a href="./shop-cart.html">Lehenga</a></li>
+                                    <li><a href="./checkout.html">Kurti</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Men’s</a></li>
+                            <li><a href="./shop.html">Shop</a></li>
+                            <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="./product-details.html">Product Details</a></li>
+                                    <li><a href="./shop-cart.html">Shop Cart</a></li>
+                                    <li><a href="./checkout.html">Checkout</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="header__right__auth" onclick="$('#registerModal').modal('show');">
+                            <a href="#">Login</a>
+                            <a href="#">Register</a>
+                        </div>
+
+                        <ul class="header__right__widget">
+                            <li>
+                                <span class="icon_search search-switch"></span>
+                            </li>
+                            <li class="tooltip-container">
+                                <a href="#"><span class="icon_heart_alt"></span></a>
+                                <div class="tooltip">Wishlist</div>
+                            </li>
+                            <li class="tooltip-container">
+                                <a href="#"><span class="icon_bag_alt"></span></a>
+                                <div class="tooltip">Cart</div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Categories Section Begin -->
+    <section class="categories">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Women’s Fashion Category -->
+                <div class="col-lg-6 p-0">
+                    <div class="categories__item categories__large__item set-bg" id="women">
+                        <div class="categories__text">
+                            <h1>Women’s fashion</h1>
+                            <p id="women-count"></p>
+                            <a href="#">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row">
+                        <!-- Men’s Fashion Category -->
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                            <div class="categories__item set-bg" id="men">
+                                <div class="categories__text">
+                                    <h4>Men’s fashion</h4>
+                                    <p id="men-count">items</p>
+                                    <a href="#">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                            <div class="categories__item set-bg" id="kid">
+                                <div class="categories__text">
+                                    <h4>Kid’s fashion</h4>
+                                    <p id="kid-count">items</p>
+                                    <a href="#">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                            <div class="categories__item set-bg" id="lehenga">
+                                <div class="categories__text">
+                                    <h4>Lehenga</h4>
+                                    <p id="lehenga-count"></p>
+                                    <a href="#">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                            <div class="categories__item set-bg" id="accessories">
+                                <div class="categories__text">
+                                    <h4>Accessories</h4>
+                                    <p id="accessories-count">792 items</p>
+                                    <a href="#">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="section-title">
+                        <h4>New product</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <ul class="filter__controls">
+                        <li class="active" data-filter="all">All</li>
+                        <li data-filter="women">Women’s</li>
+                        <li data-filter="men">Men’s</li>
+                        <li data-filter="kid">Kid’s</li>
+                        <li data-filter="accessories">Accessories</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row property__gallery" id="product-gallery">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="banner__container">
+            <!-- Left Image -->
+            <div class="banner__image">
+                <img src="img/lehenga/lehenga.jpg" alt="Left Image">
+            </div>
+    
+            <!-- Banner Content -->
+            <div class="banner__content">
+                <div class="banner__text">
+                    <span>The Chloe Collection</span>
+                    <h1>The Project Jacket</h1>
+                    <a href="#">Shop now</a>
+                </div>
+            </div>
+    
+            <!-- Right Image -->
+            <div class="banner__image">
+                <img src="img/lehenga/lehenga.jpg" alt="Right Image">
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <section class="trend spad">
+        <div class="container">
+            <div class="row">
+                <!-- Hot Trend Section -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="trend__content">
+                        <div class="section-title">
+                            <h4>Hot Trend</h4>
+                        </div>
+                        <div id="hotTrend" class="trend__items"></div>
+                    </div>
+                </div>
+
+                <!-- Best Seller Section -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="trend__content">
+                        <div class="section-title">
+                            <h4>Best Seller</h4>
+                        </div>
+                        <div id="bestSeller" class="trend__items"></div>
+                    </div>
+                </div>
+
+                <!-- Featured Section -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="trend__content">
+                        <div class="section-title">
+                            <h4>Feature</h4>
+                        </div>
+                        <div id="featured" class="trend__items"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="discount">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="discount__pic">
+                        <img src="img/lehenga/Lehenga.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="discount__text">
+                        <div class="discount__text__title">
+                            <span>Discount</span>
+                            <h2>Summer 2025</h2>
+                            <h5><span>Sale</span> 50%</h5>
+                        </div>
+                        <div class="discount__countdown" id="countdown-time">
+                            <div class="countdown__item">
+                                <span>1</span>
+                                <p>Days</p>
+                            </div>
+                            <div class="countdown__item">
+                                <span>10</span>
+                                <p>Hour</p>
+                            </div>
+                            <div class="countdown__item">
+                                <span>10</span>
+                                <p>Min</p>
+                            </div>
+                            <div class="countdown__item">
+                                <span>05</span>
+                                <p>Sec</p>
+                            </div>
+                        </div>
+                        <a href="#">Shop now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="instagram">
+        <div class="container">
+            <div class="banner_whatsapp">
+                <div class="left">
+                    <h1>GET 10% OFF CODE</h1>
+                    <p>By joining the Chithra Boutique Inner Circle!</p>
+                    <p>A community full of exclusive offers & surprises. Join now!</p>
+                    <a href="https://wa.me/+917013765836" target="_blank">
+                        <button>Join Now!</button>
+                    </a>
+                </div>
+                <div class="right">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" alt="WhatsApp Group">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="services spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="services__item">
+                        <i class="fa fa-car"></i>
+                        <h6>Free Shipping</h6>
+                        <p>For all order over ₹ 1500</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="services__item">
+                        <i class="fa fa-money"></i>
+                        <h6>Money Back Guarantee</h6>
+                        <p>If good have Problems</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="services__item">
+                        <i class="fa fa-support"></i>
+                        <h6>Online Support 24/7</h6>
+                        <p>Dedicated support</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="services__item">
+                        <i class="fa fa-headphones"></i>
+                        <h6>Payment Secure</h6>
+                        <p>100% secure payment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container p-4">
+                        <div class="row">
+                            <!-- Left Section -->
+                            <div class="col-md-3 text-center d-flex flex-column align-items-center bg-primary text-white p-4 rounded-left">
+                                <img src="img/lehenga/Lehenga.jpg" class="img-fluid rounded-circle mb-3" alt="Welcome Image" width="80">
+                                <h3>Welcome</h3>
+                                <p>You are just 30 seconds away from logging in to place your order!</p>
+                            </div>
+                            <!-- Right Section -->
+                            <div class="col-md-9">
+                                <ul class="nav nav-tabs nav-justified mb-3" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                            aria-controls="home" aria-selected="true">Register</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                            aria-controls="profile" aria-selected="false">Login</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <!-- Register Form -->
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <h4 class="text-center mb-3">Register Now</h4>
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="firstName" class="form-label">First Name</label>
+                                                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="lastName" class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="email" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="phone" class="form-label">Phone Number</label>
+                                                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" minlength="10" maxlength="10">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="password" class="form-label">Password</label>
+                                                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <label class="form-label">Gender</label>
+                                                    <div class="d-flex">
+                                                        <div class="form-check me-3">
+                                                            <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+                                                            <label class="form-check-label" for="male">Male</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                                            <label class="form-check-label" for="female">Female</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary w-100">Register</button>
+                                        </form>
+                                    </div>
+    
+                                    <!-- Login Form -->
+                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <h4 class="text-center mb-3">Login</h4>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="loginEmail" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="loginPassword" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div> <!-- col-md-9 -->
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-7">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Chithra Boutique – Where elegance meets quality! ✨ Shop with trust and style, and experience
+                            fashion that speaks to you.</p>
+                        <div class="footer__payment">
+                            <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
+                            <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
+                            <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
+                            <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
+                            <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <div class="footer__widget">
+                        <h6>Quick links</h6>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Account</h6>
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Orders Tracking</a></li>
+                            <li><a href="#">Checkout</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-8">
+                    <div class="footer__newslatter">
+                        <h6>NEWSLETTER</h6>
+                        <form action="#">
+                            <input type="text" placeholder="Email">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright__text">
+                        <p>Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved <i
+                                class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Chithra
+                                Boutique</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="javascript/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            homePageImagesCategory();
+        });
+    </script>
+</body>
+
+</html>
